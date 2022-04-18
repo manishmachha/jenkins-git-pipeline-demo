@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('non parallel') {
             agent {
-                label 'Built-In Node';
+                label 'Node1';
             }
             steps {
                 echo 'Hello %time%';
@@ -22,7 +22,7 @@ pipeline {
                     }
                     stage('Unit') {
                         agent {
-                            label 'Built-In Node';
+                            label 'Node1';
                         }
                         steps {
                             echo 'Testing';
