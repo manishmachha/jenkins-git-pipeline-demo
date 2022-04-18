@@ -6,7 +6,7 @@ pipeline {
                 label 'Node1';
             }
             steps {
-                echo 'Hello %time%';
+                echo "Hello %time%";
             }
         }
             stage('Parallel') {
@@ -16,7 +16,7 @@ pipeline {
                             label 'Node1';
                         }
                         steps {
-                            echo 'Building';
+                            echo "Building";
                             bat 'Hello.bat';
                         }
                     }
@@ -25,7 +25,7 @@ pipeline {
                             label 'Node1';
                         }
                         steps {
-                            echo 'Testing';
+                            echo "Testing";
                             bat 'Test.bat';
                         }
                     }
